@@ -1,0 +1,16 @@
+def countApplesAndOranges(s, t, a, b, apples, oranges):
+    apples_home = [a + apple for apple in apples if s <= a + apple <= t]
+    oranges_home = [b + orange for orange in oranges if s <= b + orange <= t]
+
+    print(len(apples_home))
+    print(len(oranges_home))
+
+if __name__ == '__main__':
+    s, t = map(int, input().rstrip().split())
+    a, b = map(int, input().rstrip().split())
+    m, n = map(int, input().rstrip().split())
+
+    apples = list(map(int, input().rstrip().split()))
+    oranges = list(map(int, input().rstrip().split()))
+
+    countApplesAndOranges(s, t, a, b, apples, oranges)
